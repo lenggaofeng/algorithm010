@@ -8,17 +8,17 @@
  * ba = (a'b')'
  * */
 function reverse(nums, start, end) {
-    for (var i = start, j = end; i < j; i++, j--) {
-        var tmp = nums[i];
+    for (let i = start, j = end; i < j; i++, j--) {
+        let tmp = nums[i];
         nums[i] = nums[j];
         nums[j] = tmp;
     }
 }
 function rotate(nums, k) {
-    var cnt = nums.length;
+    let cnt = nums.length;
     k = k % cnt;
-    var last = cnt - 1;
-    var mid = cnt - k;
+    let last = cnt - 1;
+    let mid = cnt - k;
     reverse(nums, 0, mid - 1);
     reverse(nums, mid, last);
     reverse(nums, 0, last);

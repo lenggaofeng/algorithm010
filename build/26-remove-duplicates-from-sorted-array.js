@@ -2,11 +2,11 @@
 // [link](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
 //从前往后遍历数组， 对于每个数字， 如果不存在，将它换到前面
 function removeDuplicates(nums) {
-    var cnt = 1;
-    for (var i = 1, l = nums.length; i < l; i++) {
-        var val = nums[i];
-        var found = false;
-        for (var j = 0; j < cnt; j++) {
+    let cnt = 1;
+    for (let i = 1, l = nums.length; i < l; i++) {
+        let val = nums[i];
+        let found = false;
+        for (let j = 0; j < cnt; j++) {
             if (nums[j] == val) {
                 found = true;
                 break;
