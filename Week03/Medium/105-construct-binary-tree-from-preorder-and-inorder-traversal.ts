@@ -30,14 +30,24 @@ class TreeNode{
  * @return {TreeNode}
  */
 function buildTree(preorder: number[], inorder:number[]): TreeNode {
-    let preoderIndexMap = new Map<number, number>();
+    let inoderIndexMap = new Map<number, number>();
     function buildMyTree(preorder: number[], inorder:number[], preorder_left: number, preorder_right: number, inorder_left: number, inorder_right: number){
+        if(preorder_left > preorder_right){return null;}
+
+        const root = preorder[preorder_left];
+        const rootI = inoderIndexMap.get(root);
+        const node = new TreeNode(root);
+        const leftLen = rootI - inorder_left - 1;
+        const leftInorderRight = preorder_left + 1 + leftLen;
+        node.left = buildMyTree(preorder, inorder, preorder_left + 1, leftInorderRight, inorder_left, rootI - 1);
+        node.right = buildMyTree(preorder, inorder, leftInorderRight + 1, preorder_right, rootI + 1, inorder_right);
+        return node;
     }
 
     inorder.forEach((v, i)=>{
-        preoderIndexMap.set(v, i);
+        inoderIndexMap.set(v, i);
     });
     let len = preorder.length;
-    buildMyTree(preorder, inorder, 0, len - 1, 0, len - 1);
-    return null;
+    return buildMyTree(preorder, inorder, 0, len - 1, 0, len - 1);
 };
+buildTree([3,9,20,15,7], [9,3,15,20,7]);
