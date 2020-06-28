@@ -1,3 +1,4 @@
+"use strict";
 /**
  * Definition for a binary tree node.
  * class TreeNode {
@@ -11,7 +12,7 @@
  *     }
  * }
  */
-
-function inorderTraversal(root: TreeNode | null): number[] {
+function inorderTraversal(root) {
     return [];
-};
+}
+;

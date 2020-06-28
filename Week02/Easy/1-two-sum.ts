@@ -1,5 +1,5 @@
 function twoSum(nums: number[], target: number): number[] {
-
+    return [];
 };
 
 // let nums = [3,2,4];

@@ -11,5 +11,4 @@
  * @return {number[][]}
  */
 var levelOrder = function (root) {
-
 };

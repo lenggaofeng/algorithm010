@@ -13,5 +13,5 @@
  */
 
 function preorderTraversal(root: TreeNode | null): number[] {
-
+    return [];
 };
