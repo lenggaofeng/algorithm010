@@ -33,4 +33,5 @@
 #班级:1班
 #小组:8组
 #语言:typescript
-#作业链接:&总结链接:https://github.com/lenggaofeng/algorithm010/tree/master/Week0x
+#作业链接: https://github.com/lenggaofeng/algorithm010/tree/master/Week0x
+#总结链接: https://github.com/lenggaofeng/algorithm010/tree/master/Week0x/NOTE.md
