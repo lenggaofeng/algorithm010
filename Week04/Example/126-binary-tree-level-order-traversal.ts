@@ -29,7 +29,7 @@ function levelOrder(root: TreeNode | null): number[][] {
     let level:number[] = [];
     levels.push(level);
     while(queue.length){
-        const node = queue.pop();
+        const node = queue.pop() as TreeNode;
         level.push(node.val);
         curI ++;
         if(node.left){

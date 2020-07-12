@@ -54,6 +54,9 @@
  * 因为每一天的状态只依赖前一天的状态， 所以空间上不需要数组， 只需要把前一天的状态记下来即可。
  * 
  */
+
+ export default null;
+ 
 function maxProfit(prices: number[]): number {
     if(prices.length == 0){
         return 0;

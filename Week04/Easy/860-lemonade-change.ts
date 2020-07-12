@@ -5,7 +5,7 @@
 /**
  * https://leetcode-cn.com/problems/lemonade-change/
  */
- function lemonadeChange(bills) {
+ function lemonadeChange(bills:number[]) {
     var five = 0;
     var ten = 0;
     var len = bills.length;

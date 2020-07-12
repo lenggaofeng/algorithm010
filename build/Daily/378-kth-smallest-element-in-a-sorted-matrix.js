@@ -22,7 +22,7 @@ function kthSmallest2(matrix, k) {
     for (let i = 0; i < n; i++) {
         queue.push([matrix[i][0], i, 0]);
     }
-    let min;
+    let min = [];
     for (let i = 0; i < k; i++) {
         queue.sort((a, b) => b[0] - a[0]);
         min = queue.pop();

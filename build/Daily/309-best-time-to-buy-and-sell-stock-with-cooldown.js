@@ -2,6 +2,7 @@
 /**
  * https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/
  */
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  *
 给定一个整数数组，其中第 i 个元素代表了第 i 天的股票价格 。​
@@ -53,6 +54,7 @@
  * 因为每一天的状态只依赖前一天的状态， 所以空间上不需要数组， 只需要把前一天的状态记下来即可。
  *
  */
+exports.default = null;
 function maxProfit(prices) {
     if (prices.length == 0) {
         return 0;

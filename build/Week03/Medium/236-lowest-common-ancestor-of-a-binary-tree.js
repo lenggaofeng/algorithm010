@@ -12,6 +12,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 exports.default = null;
 class TreeNode {
+    constructor() {
+        this.val = 0;
+        this.left = null;
+        this.right = null;
+    }
 }
 /**
  * @param {TreeNode} root

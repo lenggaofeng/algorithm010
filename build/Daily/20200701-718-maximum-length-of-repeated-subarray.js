@@ -11,13 +11,13 @@ function findLength(A, B) {
     for (let i = 0; i < A.length; i++) {
         for (let j = 0; j < B.length; j++) {
             if (A[i] == B[j]) {
-                const cnt = dp[i] = dp[i - 1][j - 1] + 1;
+                const cnt = dp[i] = dp[i - 1] + 1;
                 if (cnt > max) {
                     max = cnt;
                 }
             }
             else {
-                dp[i][j] = 0;
+                dp[i] = 0;
             }
         }
     }

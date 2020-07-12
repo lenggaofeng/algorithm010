@@ -25,10 +25,10 @@ function kthSmallest2(matrix: number[][], k: number): number {
         queue.push([matrix[i][0], i, 0]);
     }
 
-    let min;
+    let min:number[] = [];
     for (let i = 0; i < k;i++){
         queue.sort((a,b)=>b[0] - a[0]);
-        min = queue.pop();
+        min = queue.pop() as number[];
         if(min[2] as number < n - 1){
             let row = min[1];
             let col = min[2] + 1;

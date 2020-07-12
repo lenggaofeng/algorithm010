@@ -11,9 +11,9 @@
 export default null;
 
 class TreeNode{
-    public val: number;
-    public left: TreeNode;
-    public right: TreeNode;
+    public val: number = 0;
+    public left: TreeNode|null = null;
+    public right: TreeNode|null = null;
 }
 /**
  * @param {TreeNode} root
@@ -28,8 +28,8 @@ class TreeNode{
  */
 
 function lowestCommonAncestor(root:TreeNode, p: TreeNode, q: TreeNode): TreeNode {
-    const parents = new Map<TreeNode, TreeNode>();
-    function setTreeParents(node:TreeNode, parent: TreeNode){
+    const parents = new Map<TreeNode, TreeNode|null>();
+    function setTreeParents(node:TreeNode|null, parent: TreeNode|null){
         if(node == null){return;}
         parents.set(node, parent);
         setTreeParents(node.left, node);
@@ -38,10 +38,10 @@ function lowestCommonAncestor(root:TreeNode, p: TreeNode, q: TreeNode): TreeNode
     setTreeParents(root, null);
 
     const set = new Set();
-    let node = p;
+    let node:TreeNode|null = p;
     while(node != null){
         set.add(node);
-        node = parents.get(node);
+        node = parents.get(node) as TreeNode;
     }
 
     node = q;
@@ -61,8 +61,8 @@ function lowestCommonAncestor(root:TreeNode, p: TreeNode, q: TreeNode): TreeNode
  * https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/solution/236-er-cha-shu-de-zui-jin-gong-gong-zu-xian-hou-xu/
  */
 
-function lowestCommonAncestor2(root:TreeNode, p: TreeNode, q: TreeNode): TreeNode {
-    function dfs(root:TreeNode, p: TreeNode, q: TreeNode){
+function lowestCommonAncestor2(root:TreeNode, p: TreeNode, q: TreeNode): TreeNode|null {
+    function dfs(root:TreeNode, p: TreeNode, q: TreeNode): TreeNode|null{
         if(!root){return null;}
         if(root == p || root == q){
             return root;
