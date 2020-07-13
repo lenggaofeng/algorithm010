@@ -1,5 +1,6 @@
 // [参考题解](https://leetcode-cn.com/problems/chou-shu-lcof/solution/chou-shu-ii-qing-xi-de-tui-dao-si-lu-by-mrsate/)
 
+export default null;
 function nthUglyNumber(n: number): number {
     let a = 0, b = 0, c = 0;
     let dp = new Array(n);
