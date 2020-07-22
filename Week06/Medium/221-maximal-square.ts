@@ -10,6 +10,7 @@
 
 function maximalSquare(matrix: string[][]): number {
     let m = matrix.length;
+    if(m == 0){return 0;}
     let n = matrix[0].length;
     if(n == 0){return 0;}
     let dp:number[][] = Array.from(new Array(m), v=>new Array(n).fill(0));
@@ -23,7 +24,6 @@ function maximalSquare(matrix: string[][]): number {
             }
             size = Math.max(size, dp[i][j]);
         }
-        console.log('--', size, dp[i])
     }
     return size * size;
 };
