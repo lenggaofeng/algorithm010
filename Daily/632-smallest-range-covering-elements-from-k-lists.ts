@@ -156,16 +156,16 @@ function smallestRange2(nums: number[][]): number[] {
     let rangeLeft = 0, rangeRight = Number.MAX_VALUE;
     let range = rangeRight - rangeLeft;
 
-    let groupNumCount = new Array(k).fill(0);
+    let groupTimes = new Array(k).fill(0);
     let size = 0;
     let leftIndex = 0;
     // console.log("--", num2GroupMap);
     num2GroupMap.forEach(([num, group], right)=>{
-        if(groupNumCount[group] ++ == 0){size ++;}
+        if(groupTimes[group] ++ == 0){size ++;}
         // console.log("==", leftIndex, right, size);
         while(size == k){
             let [curMin, groupLeft] = num2GroupMap[leftIndex++];
-            if(--groupNumCount[groupLeft] == 0){
+            if(--groupTimes[groupLeft] == 0){
                 size --;
                 if(num - curMin < range){
                     rangeLeft = curMin;
