@@ -26,14 +26,14 @@ export class Heap{
         this._size ++;
     }
 
-    public top():number{
+    public top():number|undefined{
         if(this._size > 0){
             return this._data[0];
         }
         return undefined;
     }
 
-    public pop():number{
+    public pop():number|undefined{
         if(this._size <= 0){
             return undefined;
         }
