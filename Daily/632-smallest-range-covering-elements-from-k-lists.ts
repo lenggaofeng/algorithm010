@@ -159,10 +159,8 @@ function smallestRange2(nums: number[][]): number[] {
     let groupTimes = new Array(k).fill(0);
     let size = 0;
     let leftIndex = 0;
-    // console.log("--", num2GroupMap);
     num2GroupMap.forEach(([num, group], right)=>{
         if(groupTimes[group] ++ == 0){size ++;}
-        // console.log("==", leftIndex, right, size);
         while(size == k){
             let [curMin, groupLeft] = num2GroupMap[leftIndex++];
             if(--groupTimes[groupLeft] == 0){
@@ -173,7 +171,6 @@ function smallestRange2(nums: number[][]): number[] {
                     range = num - curMin;
                 }
             }
-            // console.log(">>", min, max, range, groupLeft, groupNumCount[groupLeft], size);
         }
     });
     return [rangeLeft, rangeRight];
