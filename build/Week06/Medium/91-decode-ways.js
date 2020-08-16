@@ -42,8 +42,9 @@ function numDecodings(s) {
         }
         pre = cur;
         cur = tmp;
+        console.log("---", i, pre, cur);
     }
     return cur;
 }
 ;
-// console.log(numDecodings("227"));
+console.log(numDecodings("24726"));
