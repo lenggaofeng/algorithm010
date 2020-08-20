@@ -15,20 +15,20 @@ function updateBoard(board, click) {
         const first = queue.shift();
         const [i, j] = first;
         const sides = [];
-        const count = stepX.map((ox, index) => {
-            const oy = stepY[index];
-            const ni = i + ox;
-            const nj = j + oy;
+        let count = 0;
+        for (let k = 0, l = stepX.length; k < l; k++) {
+            const ni = i + stepX[k];
+            const nj = j + stepY[k];
             if (ni >= 0 && ni < m && nj >= 0 && nj < n) {
                 const nc = board[ni][nj];
-                const flag = nc == "M";
                 if (nc == "E") {
-                    sides.push(index);
+                    sides.push(k);
                 }
-                return flag ? 1 : 0;
+                else if (nc == "M") {
+                    count++;
+                }
             }
-            return 0;
-        }).reduce((a, b) => a + b, 0);
+        }
         if (count == 0) {
             board[i][j] = "B";
             sides.forEach(v => {
