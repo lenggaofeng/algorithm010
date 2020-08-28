@@ -4,14 +4,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * 堆， 常用于排序， 常见的有 大根堆， 小根堆。 对于大根堆， 每个节点的值一定大于任意一个子节点的值。
  * 可以使用数组作为它的内部结构， 插入和删除的时间复杂度均为O(logn);
  */
+exports.default = null;
 class Heap {
-    constructor(compare = Heap.defaultComp) {
+    constructor(compare) {
         this.compare = compare;
         this._data = [];
         this._size = 0;
-    }
-    static defaultComp(a, b) {
-        return a > b;
     }
     push(val) {
         if (this._size >= this._data.length - 1) {
@@ -85,9 +83,8 @@ class Heap {
         data[j] = tmp;
     }
 }
-exports.Heap = Heap;
 function test() {
-    const h = new Heap();
+    const h = new Heap((a, b) => a > b);
     for (let i = 0; i < 1000; i++) {
         const r = Math.floor(Math.random() * 10000);
         h.push(r);
@@ -104,3 +101,28 @@ function test() {
         pre = v;
     }
 }
+function findItinerary(tickets) {
+    const sides = new Map();
+    tickets.forEach(([from, to]) => {
+        let list = sides.get(from);
+        if (!list) {
+            list = new Heap((a, b) => a < b);
+            sides.set(from, list);
+        }
+        list.push(to);
+    });
+    const results = [];
+    function dfs(root) {
+        if (sides.has(root)) {
+            const nexts = sides.get(root);
+            while (nexts.size) {
+                dfs(nexts.pop());
+            }
+        }
+        results.push(root);
+    }
+    dfs("JFK");
+    return results.reverse();
+}
+;
+console.log(findItinerary([["JFK", "SFO"], ["JFK", "ATL"], ["SFO", "ATL"], ["ATL", "JFK"], ["ATL", "SFO"]]));
