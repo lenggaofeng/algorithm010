@@ -2,6 +2,7 @@
  * https://leetcode-cn.com/problems/n-queens/
  */
 
+export default null;
 function solveNQueens(n: number): string[][] {
     let results:string[][] = new Array();
     function dfs(row:number, states:number[], cols:number, pies:number, nas:number){

@@ -2,6 +2,8 @@
 /**
  * https://leetcode-cn.com/problems/n-queens/
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = null;
 function solveNQueens(n) {
     let results = new Array();
     function dfs(row, states, cols, pies, nas) {
