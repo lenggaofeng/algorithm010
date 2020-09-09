@@ -4,6 +4,8 @@
  * https://leetcode-cn.com/problems/add-strings/
  *
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = null;
 let code0 = "0".charCodeAt(0);
 let num2Str = new Array(10);
 for (let i = 0; i < 10; i++) {

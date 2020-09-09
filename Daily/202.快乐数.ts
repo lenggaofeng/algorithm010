@@ -6,7 +6,7 @@
 
 // @lc code=start
 function isHappy(n: number): boolean {
-
+    return true;
 };
 // @lc code=end
 

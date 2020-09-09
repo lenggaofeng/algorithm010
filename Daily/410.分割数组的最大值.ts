@@ -6,7 +6,7 @@
 
 // @lc code=start
 function splitArray(nums: number[], m: number): number {
-
+    return 0;
 };
 // @lc code=end
 

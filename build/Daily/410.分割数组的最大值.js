@@ -6,6 +6,7 @@
  */
 // @lc code=start
 function splitArray(nums, m) {
+    return 0;
 }
 ;
 // @lc code=end

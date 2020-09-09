@@ -2,6 +2,8 @@
  * https://leetcode-cn.com/problems/reverse-bits/
  */
 
+export default null;
+
 function reverseBits(n:number){
     let result = 0;
     let mask = 1;

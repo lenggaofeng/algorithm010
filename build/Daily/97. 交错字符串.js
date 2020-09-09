@@ -2,6 +2,7 @@
 /**
  * https://leetcode-cn.com/problems/interleaving-string/
  */
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  *
  * 思路，
@@ -31,6 +32,7 @@
 //     }
 //     return dp[m][n];
 // };
+exports.default = null;
 function isInterleave(s1, s2, s3) {
     if (s1.length + s2.length != s3.length) {
         return false;

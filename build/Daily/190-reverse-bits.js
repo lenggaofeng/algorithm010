@@ -2,6 +2,8 @@
 /**
  * https://leetcode-cn.com/problems/reverse-bits/
  */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = null;
 function reverseBits(n) {
     let result = 0;
     let mask = 1;

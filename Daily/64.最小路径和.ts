@@ -3,7 +3,7 @@
  *
  * [64] 最小路径和
  */
-
+export default null;
 // @lc code=start
 function minPathSum(grid: number[][]): number {
     if(grid.length <= 0){return 0;}

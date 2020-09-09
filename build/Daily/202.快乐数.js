@@ -6,6 +6,7 @@
  */
 // @lc code=start
 function isHappy(n) {
+    return true;
 }
 ;
 // @lc code=end

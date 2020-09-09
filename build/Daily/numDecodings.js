@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = null;
 function numDecodings(s) {
     if (s[0] == "0") {
         return 0;

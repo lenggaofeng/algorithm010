@@ -6,6 +6,7 @@
  */
 // @lc code=start
 function findMaxConsecutiveOnes(nums) {
+    return 0;
 }
 ;
 // @lc code=end

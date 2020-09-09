@@ -4,6 +4,8 @@
  * 
  */
 
+export default null;
+
 let code0 = "0".charCodeAt(0);
 let num2Str = new Array(10);
 for(let i = 0; i < 10; i++){

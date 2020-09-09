@@ -1,3 +1,4 @@
+export default null;
 function numDecodings(s:string){
     if(s[0] == "0") {return 0;}
     let n = s.length;

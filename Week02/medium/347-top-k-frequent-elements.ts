@@ -1,3 +1,5 @@
+export default null;
+
 /** 暴力解法， 使用 Map 统计次数， 并对次数进行排序， */
 function topKFrequent(nums: number[], k: number): number[] {
     let map = new Map<number, number>();

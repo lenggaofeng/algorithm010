@@ -1,3 +1,4 @@
+export default null;
 function combine(n: number, k: number): number[][] {
     const result: number[][] = [];
     function helper(base:number, cache: number[]) {

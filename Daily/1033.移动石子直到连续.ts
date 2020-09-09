@@ -6,7 +6,7 @@
 
 // @lc code=start
 function numMovesStones(a: number, b: number, c: number): number[] {
-
+    return [];
 };
 // @lc code=end
 

@@ -6,6 +6,7 @@
  */
 // @lc code=start
 function addStrings(num1, num2) {
+    return "";
 }
 ;
 // @lc code=end

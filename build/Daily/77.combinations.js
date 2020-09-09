@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = null;
 function combine(n, k) {
     const result = [];
     function helper(base, cache) {

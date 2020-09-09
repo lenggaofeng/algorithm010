@@ -32,7 +32,7 @@
 //     }
 //     return dp[m][n];
 // };
-
+export default null;
 
 function isInterleave(s1: string, s2: string, s3: string): boolean {
     if(s1.length + s2.length != s3.length){return false;}
@@ -42,7 +42,7 @@ function isInterleave(s1: string, s2: string, s3: string): boolean {
     dp[0] = true;
     for(let i = 0; i <= m; i++){
         for(let j = 0; j <= n; j++){
-            if(i > 0){
+            if (i > 0) {
                 dp[j] = dp[j] && s3[i + j - 1] == s1[i- 1]
             }
             if(j > 0){

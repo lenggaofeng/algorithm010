@@ -1,9 +1,11 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /*
  * @lc app=leetcode.cn id=64 lang=typescript
  *
  * [64] 最小路径和
  */
+exports.default = null;
 // @lc code=start
 function minPathSum(grid) {
     if (grid.length <= 0) {
