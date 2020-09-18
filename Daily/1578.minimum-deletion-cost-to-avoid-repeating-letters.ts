@@ -34,21 +34,19 @@ function minCost(s: string, cost: number[]): number {
 
 function minCost1(s: string, cost: number[]): number {
     let n = s.length;
-    let maxCost = 0;
+    let costTotal = 0;
     for (let i = 0; i < n; i ++){
         let c = s[i];
         let max = cost[i];
         while (i < n - 1 && c == s[i + 1]) {
             i++;
             let curCost = cost[i];
-            maxCost += Math.min(max, curCost);
-            if (curCost > max) {
-                max = curCost;
-            }
+            costTotal += Math.min(max, curCost);
+            max = Math.max(max, curCost);
         }
     }
 
-    return maxCost;
+    return costTotal;
 };
 
 export default null;
