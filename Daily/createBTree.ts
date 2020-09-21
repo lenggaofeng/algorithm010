@@ -10,12 +10,30 @@ export class TreeNode {
 }
 
 export function createBTreeByArr(arr: number[]): TreeNode | null {
+    let n = arr.length;
+    if(n <= 0){
+        return null;
+    }
+
+    const root = new TreeNode(arr[0]);
+    let i = 1;
+    const queue:TreeNode[] = [root];
+    while(i < n){
+        const node = queue.shift();
+        node.left = createNode(i ++);
+        node.right = createNode(i ++);
+        if(node.left){
+            queue.push(node.left);
+        }
+        if(node.right){
+            queue.push(node.right);
+        }
+    }
+
+    return root;
+
     function createNode(i: number): TreeNode | null {
         if (i >= arr.length || arr[i] == null) { return null; }
-        const node = new TreeNode(arr[i]);
-        node.left = createNode(i * 2 + 1);
-        node.right = createNode(i * 2 + 2);
-        return node;
+        return new TreeNode(arr[i]);
     }
-    return createNode(0);
 }
