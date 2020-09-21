@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Heap = void 0;
 /**
  * 堆， 常用于排序， 常见的有 大根堆， 小根堆。 对于大根堆， 每个节点的值一定大于任意一个子节点的值。
  * 可以使用数组作为它的内部结构， 插入和删除的时间复杂度均为O(logn);
