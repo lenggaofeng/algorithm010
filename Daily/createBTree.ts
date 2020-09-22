@@ -37,3 +37,33 @@ export function createBTreeByArr(arr: number[]): TreeNode | null {
         return new TreeNode(arr[i]);
     }
 }
+
+export function dumpBTree2Arr(root: TreeNode | null): (number|null)[] {
+    if(!root){return []};
+    let result:(number|null)[] = [root.val];
+    const queue = [root];
+    while(queue.length){
+        const node = queue.shift();
+        if(node.left){
+            queue.push(node.left);
+            result.push(node.left.val);
+        } else {
+            result.push(null);
+        }
+        if(node.right){
+            queue.push(node.right);
+            result.push(node.right.val);
+        } else {
+            result.push(null);
+        }
+    }
+
+    while(result.length){
+        if(result[result.length - 1] == null){
+            result.pop();
+        } else {
+            break;
+        }
+    }
+    return result;
+}
