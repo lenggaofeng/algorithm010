@@ -22,7 +22,7 @@ export function getCompArr<T>(comp:Comp<T>, sort?:(arr:T[])=>void) {
     }
 }
 
-export function testWithResult<I, O>(cases: Case<I, O>[], func: (input: I) => O, comp:Comp<O>) {
+export function testWithResult<I, O>(cases: Case<I, O>[], func: (input: I) => O, comp:Comp<O> = CompBase) {
     const flag = cases.every((v, i) => {
         const result = func(v.input);
         const flag = comp(result, v.output);

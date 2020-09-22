@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.testWithCheck = exports.testWithResult = exports.getCompArr = exports.CompBase = void 0;
 function CompBase(a, b) {
     return a === b;
 }
@@ -20,7 +19,7 @@ function getCompArr(comp, sort) {
     };
 }
 exports.getCompArr = getCompArr;
-function testWithResult(cases, func, comp) {
+function testWithResult(cases, func, comp = CompBase) {
     const flag = cases.every((v, i) => {
         const result = func(v.input);
         const flag = comp(result, v.output);
