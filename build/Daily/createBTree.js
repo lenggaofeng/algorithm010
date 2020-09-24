@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.dumpBTree2Arr = exports.createBTreeByArr = exports.TreeNode = void 0;
 class TreeNode {
     constructor(val, left, right) {
         this.val = (val === undefined ? 0 : val);
@@ -36,3 +37,38 @@ function createBTreeByArr(arr) {
     }
 }
 exports.createBTreeByArr = createBTreeByArr;
+function dumpBTree2Arr(root) {
+    if (!root) {
+        return [];
+    }
+    ;
+    let result = [root.val];
+    const queue = [root];
+    while (queue.length) {
+        const node = queue.shift();
+        if (node.left) {
+            queue.push(node.left);
+            result.push(node.left.val);
+        }
+        else {
+            result.push(null);
+        }
+        if (node.right) {
+            queue.push(node.right);
+            result.push(node.right.val);
+        }
+        else {
+            result.push(null);
+        }
+    }
+    while (result.length) {
+        if (result[result.length - 1] == null) {
+            result.pop();
+        }
+        else {
+            break;
+        }
+    }
+    return result;
+}
+exports.dumpBTree2Arr = dumpBTree2Arr;
