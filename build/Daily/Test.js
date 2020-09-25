@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.testWithCheck = exports.testWithResult = exports.getCompArr = exports.CompBase = void 0;
 function CompBase(a, b) {
     return a === b;
 }
