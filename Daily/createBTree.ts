@@ -38,6 +38,12 @@ export function createBTreeByArr(arr: number[]): TreeNode | null {
     }
 }
 
+export function findNodeInTree(root: TreeNode | null, val:number): TreeNode | null{
+    if(!root){return null;}
+    if(root.val == val){return root;}
+    return findNodeInTree(root.left, val) || findNodeInTree(root.right, val);
+}
+
 export function dumpBTree2Arr(root: TreeNode | null): (number|null)[] {
     if(!root){return []};
     let result:(number|null)[] = [root.val];
