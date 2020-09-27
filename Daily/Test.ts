@@ -3,6 +3,8 @@ export type Case<I, O> = {
     output: O,
 }
 
+export type CaseArr<I, O> = Case<I, O>[];
+
 export type Comp<I> = (a: I, b: I) => boolean;
 
 export function CompBase<T>(a:T, b:T) {
