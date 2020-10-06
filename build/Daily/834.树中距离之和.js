@@ -75,7 +75,7 @@ function sumOfDistancesInTree(N, edges) {
 ;
 // @lc code=end
 const cases = [
-    // {input: [6, [[0,1],[0,2],[2,3],[2,4],[2,5]]], output: [8,12,6,10,10,10]}
+    { input: [6, [[0, 1], [0, 2], [2, 3], [2, 4], [2, 5]]], output: [8, 12, 6, 10, 10, 10] },
     { input: [2, [[1, 0]]], output: [1, 1] }
 ];
 Test_1.testWithResult(cases, ([n, edges]) => sumOfDistancesInTree(n, edges), Test_1.getCompArr(Test_1.CompBase));

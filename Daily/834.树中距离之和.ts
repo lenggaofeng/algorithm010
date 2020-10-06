@@ -82,7 +82,7 @@ function sumOfDistancesInTree(N: number, edges: number[][]): number[] {
 // @lc code=end
 
 const cases: CaseArr<[number, number[][]], number[]> = [
-    // {input: [6, [[0,1],[0,2],[2,3],[2,4],[2,5]]], output: [8,12,6,10,10,10]}
+    {input: [6, [[0,1],[0,2],[2,3],[2,4],[2,5]]], output: [8,12,6,10,10,10]},
     {input: [2, [[1, 0]]], output: [1, 1]}
 ]
 
