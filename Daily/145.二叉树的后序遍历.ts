@@ -4,7 +4,7 @@
  * [145] 二叉树的后序遍历
  */
 
-import { createBTreeByArr } from "./createBTree";
+import { TreeNode, createBTreeByArr } from "./createBTree";
 
 // @lc code=start
 /**
