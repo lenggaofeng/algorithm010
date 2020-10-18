@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.UnionSet = void 0;
 class UnionSet {
     constructor() {
         this.data = [];
