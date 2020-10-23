@@ -35,7 +35,7 @@ function isPalindrome(head: ListNode | null): boolean {
     let left = slow;
     let right = slow.next;
     slow.next = pre;
-    if(!fast.next){
+    if(fast != head && !fast.next){
         left = left.next;
     }
 
