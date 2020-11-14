@@ -10,7 +10,7 @@ function relativeSortArray(arr1: number[], arr2: number[]): number[] {
 
     let m = arr2.length;
     function getI(n:number){
-        return map.has(n) ? map.get(n) : m + n;
+        return map.has(n) ? (map.get(n) as number) : m + n;
     }
 
     arr1.sort((a, b)=>{
